@@ -2,10 +2,18 @@ import React from 'react'
 
  function Header() {
     return (
-        <Header>
+        <header style={headerStyle}>
             <h1> Christmas List </h1>
-        </Header>
+        </header>
         
     )
 }
+
+const headerStyle = {
+    background: '#333',
+    color: '#fff',
+    textAlign: 'center',
+    padding: '10px'
+}
+
 export default Header;
