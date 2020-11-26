@@ -5,11 +5,17 @@ state = {
     title: ''
 }
 
-onChange = (e) => this.setState({ title: e.target.vaule });
+onSubmit = (e) => {
+    e.preventDefault();
+    this.props.AddTodo(this.state.title);
+    this.setState({ title: ''});
+}
+
+onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
     render() {
         return (
-           <form style={{ display: 'flex'}}>
+           <form onSubmit={thi.onSubmit} style={{ display: 'flex'}}>
                <input
                  type="text" 
                  name="title" 
